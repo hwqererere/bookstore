@@ -1,0 +1,27 @@
+<template name="getcoin" >
+  <view class="getcoin">
+      <view class="toptitle">我的金币</view>
+      <view class="coinline"><view class="coin"><view class="add" bindtap="fn" data-fn="openAddCoinFloated"></view><text>{{getcoinData.coin}}</text></view></view>
+      <view class="signbut {{getcoinData.sign_today?'havesign':''}}"  bindtap="fn" data-fn="signclick">{{getcoinData.sign_today?'已签到':'签到'}}</view>
+      <view class="daylist">
+      	<view class="dli" wx:for="{{getcoinData.loginSign_info}}" wx:key="key">
+      		<text>{{item.coin}}</text>
+      		<text>{{item.d}}</text>
+      		<view class="dlisign" wx:if="{{item.reward}}"></view>
+      	</view>
+      </view>
+      <label class="sharebut">分享群或好友<button open-type='share' data-sharefn="coinshare"></button></label>
+      <view class="friendbox blackbg50">
+      	<view class="boxtitle">
+      		<text>每邀请1个好友进入加</text>
+      		<text>3000(群更容易获得)</text>
+      		<view class="reflash" bindtap="fn" data-fn="reflashRelation"></view>
+      	</view>
+      	<scroll-view class="relation-box">
+      		<view wx:for="{{getcoinData.userRelation_info}}" wx:key="key" class="nullimage" ><image  src="{{item.user_logo==''?'https://res.doumai.com/mxdzz/user.png':item.user_logo}}"></image></view>
+					<view wx:for="{{getcoinData.nullimg}}" wx:key="key" class="nullimage none" ></view>
+      	</scroll-view>
+				<view class="boxfoot">共邀请<font>{{getcoinData.userRelation_info.length}}</font>位好友</view>
+      </view>
+  </view>
+</template>

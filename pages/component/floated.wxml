@@ -1,0 +1,91 @@
+<template name="floated" >
+	<view class="flaybg"></view>
+	<view id="getGold" wx:if="{{floatedData.id=='getGold'}}">
+    	<view class="boxDiv">
+	      <view class="boxTitle">
+	        <text>获取金币</text>
+	        <text>挑战所需金币：200</text>
+	      </view>
+				<label wx:if="{{login}}" class="inviteBtn">邀请好友进入赠送2000金币<button open-type='share' data-sharefn="coinshare"></button> </label>
+	      <view class="rewardBtn" wx:if="{{notIOS}}" bindtap="fn" data-fn="addcoin" data-val='100'>打赏1.00元赠送10000金币</view>
+	      <view class="rewardBtn" wx:if="{{notIOS}}" bindtap="fn" data-fn="addcoin" data-val='200'>打赏2.00元赠送24000金币</view>
+	      
+	      <view class="close" bindtap="closeFloated"><image src="https://res.doumai.com/mxdzz/close.png"></image></view>
+	    </view>
+  </view>
+  
+  
+  
+ 	<view id="getAward" wx:if="{{floatedData.id=='getAward'}}">
+	    <view class="boxDiv">
+	      <view class="awardPrice">获得红包<text>{{floatedData.rmb/100}}</text>元</view>
+	      <view class="awardIcon"></view>
+	      <view class="awardTips">每10关可获得1个红包</view>
+	      <view class="nextBtn" bindtap="fn" data-fn="nextquestion">进入下一关</view>
+	    </view>
+  	</view>
+  	
+  	
+  	<view id="awardword" wx:if="{{floatedData.id=='awardword'}}">
+	    <view class="word1">每10关获得1个最高 <font>1元红包</font></view>
+	    <view class="word1">每100关获得1个最高 <font>10元红包</font></view>
+	    <view class="word1">每1000关获得1个最高 <font>99元红包</font></view>
+	    <view class="awardclose" bindtap="closeFloated"></view>
+  	</view>
+		
+		<view class="floated-lay" id="sign" wx:if="{{floatedData.id=='sign'}}">
+			<view class="box" >
+				<view class="title">每日签到</view>
+				<view class="boxbody">
+					<view class="sul">
+						<view  wx:for="{{floatedData.infolist}}" class="sli">
+							<view class="day">{{item.d}}</view>
+							<view class="coin  {{item.reward?'havesign':''}}">{{item.coin}}<view class="gou"></view></view>
+						</view>	
+					</view>
+					<view class="signbut" bindtap="fn" data-fn="signclick">签到</view>				
+				</view>
+				
+			</view>
+		</view>
+		
+		<view id="timeredbag" wx:if="{{floatedData.id=='timeredbag'}}">
+			<view class="box" >
+				<view class="title">拆开获得随机<font>大红包</font></view>
+				<view class="close" bindtap="closeFloated"></view>
+				<view class="main">
+					<view class="timeline">
+						<view class="timeline1">倒计时</view>
+						<view class="timeline2">
+							<label class="timeb">{{floatedData.helptime.hour}}</label><label class="timew">时</label>
+							<label class="timeb">{{floatedData.helptime.minutes}}</label><label class="timew">分</label>
+							<label class="timeb">{{floatedData.helptime.second}}</label><label class="timew">秒</label>
+						</view>
+					</view>
+					<view class="redbagview" bindtap="fn" data-fn="openhelperredbag"></view>
+					<view class="timetips">邀请一位<font>好友助力</font>可<font>减一个小时</font></view>
+					<view class="timetips">邀请满三位好友助力可立即<font>领取红包</font></view>
+					<view class="helpfirline">
+						<view wx:for="{{floatedData.helpers}}" wx:key="key"  class="{{item.show==1?'helpfri':'helpnonefri'}}">
+							<image wx:if="{{item.show==1}}" src="{{item.user_logo?item.user_logo:'https://res.doumai.com/mxdzz/user.png'}}"></image>
+							
+						</view>
+						
+					</view>
+					<button class="invfir" open-type='share' data-sharefn="coinshare">邀请好友</button>
+				</view>
+			</view>
+		</view>
+		
+		
+		<view id="redbag" wx:if="{{floatedData.id=='redbag'}}">
+			<view class="box" >
+				<view class="redbagtop1"></view>
+				<view class="redbagtop"><view class="logo"></view></view>
+				<view class="msg">恭喜发财 大吉大利</view>
+				<view class="money">{{floatedData.rmb/100}}</view>
+				<view class="tipline">已存钱包，可直接提现</view>
+				<view class="showmyreward but" bindtap="fn" data-fn="closeredbag" >返回</view>  
+			</view>
+		</view>
+</template>

@@ -1,0 +1,29 @@
+<view class="body">
+	<import src="../component/floated.wxml" />
+  <import src="../component/index.wxml" />
+  <import src="../component/game.wxml" />
+  <import src="../component/getcoin.wxml" />
+  <import src="../component/rank.wxml" />
+  <import src="../component/cash.wxml" />
+	<import src="../component/cashlist.wxml" />
+
+	<import src="../component/morepage.wxml" />
+  <view class="tips" wx:if="{{tips!=''}}">
+    <view class="tipsbg"></view>
+    <view class="tipscontent">{{tips}}</view>
+  </view>
+  
+  <template wx:if="{{pageid=='index'}}" is="index" data="{{...{indexData:indexData,login:login,nickName:nickName,ad:ad} }}" />
+  <template wx:if="{{pageid=='game'}}" is="game" data="{{...{gameData:gameData,animate:animate,nobgm:nobgm,ad:ad} }}" />
+  <template wx:if="{{pageid=='rank'}}" is="rank" data="{{...{rankData:rankData,login:login} }}" />
+  <template wx:if="{{pageid=='getcoin'}}" is="getcoin" data="{{...{getcoinData:getcoinData,login:login} }}" />
+  <template wx:if="{{pageid=='cash'}}" is="cash" data="{{...{cashData:cashData,login:login} }}" />
+	<template wx:if="{{pageid=='cashlist'}}" is="cashlist" data="{{...{cashlistData:cashlistData,login:login} }}" />
+	<template wx:if="{{pageid=='morepage'}}" is="morepage" data="{{...{morepageData:morepageData,login:login} }}"/>
+
+  <!-- <view class="more">
+    <import src="../component/more.wxml" />
+    <template wx:if="{{pageid=='index'}}" is="more" data="{{login}}" />
+  </view> -->
+	<template wx:if="{{floatedData.id!=''}}" is="floated" data="{{...{login:login,floatedData:floatedData,notIOS:notIOS} }}"></template>
+</view>

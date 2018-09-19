@@ -1,0 +1,15 @@
+<template name="morepage">
+	<view class="morepage">
+		<scroll-view scroll-y class="mul">
+			<view class="mli blackbg30" wx:for="{{morepageData}}" wx:key="key" wx:if="{{item.link!='wx23acbc1a01b4161a' && item.show==1}}">
+				<view class="img"><image src="{{item.game_pic}}"></image></view>
+				<view class="word">
+					<view>{{item.game_name}}</view>
+					<view>{{item.tips}}</view>
+				</view>
+				
+				<navigator  class="but" target="miniProgram" open-type="navigate" app-id="{{item.link}}" path="pages/index/index?channel_id=22" extra-data=""  version="release">去游戏</navigator>
+			</view>
+		</scroll-view>
+	</view>
+</template>

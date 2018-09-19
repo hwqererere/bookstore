@@ -1,0 +1,12 @@
+<template name="cashlist" >
+	<scroll-view scroll-y  class="cashlist" >  
+  <view class="bli" wx:for="{{cashlistData}}" wx:for-index="idx" wx:key="i">
+    <view class="blileft">
+      <view class="ordernum">订单号{{item.order_num}}</view>
+      <view class="orderrmb">提现金额:￥{{item.order_rmb/100}}  </view>
+      <view class="ordercreatetime">{{item.order_create_time}} <font style="{{item.order_state==0?'color:#a50000':''}}">{{item.order_state==0?'审核中':''}}{{item.order_state==2?'审核通过':''}}{{item.order_state==1?'已提现':''}}</font></view>
+    </view>
+    <view class="statebut statebut1" wx:if="{{item.order_state==99999}}" bindtap='clickFn'  data-fn="copyword" data-val="{{item.order_num}}">复制订单号</view>
+  </view>
+</scroll-view>
+</template>

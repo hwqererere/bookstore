@@ -1,0 +1,46 @@
+<template name="index">
+  <view class="index">
+  	<navigator class="floatedclick"  target="miniProgram" open-type="navigate" app-id="wx03679e43d6b2bae3" path="pages/index/index" extra-data=""  version="release"></navigator>
+		<view class="timeredbag" bindtap="fn" data-fn="openhelpfloated" wx:if="{{indexData.timeing==1}}">{{indexData.helptime}}</view>
+    <view class="indextop">
+      <label class="shareicon"><button open-type='share' data-sharefn="coinshare"></button></label>
+      <view src="" class="titleicon"></view>
+    </view>
+    <view class="userInfo">
+      <view class="userState">
+        <label class="userLogin"><button open-type='getUserInfo' bindgetuserinfo="bindgetUserInfo" data-type='login' wx:if="{{!login}}"></button><view class="userImg"><open-data type="userAvatarUrl"></open-data></view><text class="userName fontSmall">{{login?nickName:'未登录'}}</text></label>
+        <view class="userNumber"><text>{{indexData.level-1}}</text></view>
+        <view class="userBalance"><view class="moneyicon"></view><text class="fontBig">{{indexData.rmb==0?"0.00":indexData.rmb/100}}</text></view>
+      </view>
+      <view class="userPrice">
+        <view><label class="coin"></label><label class="txt">{{indexData.coin}}</label><form bindsubmit="formSubmit" report-submit><button formType="submit" class="add" bindtap="fn" data-fn="openAddCoinFloated"></button></form></view>
+        <view>已挑战（关）</view>
+        <label>钱包余额（元）
+					<button open-type='getUserInfo' bindgetuserinfo="bindgetUserInfo" data-type='login' wx:if="{{!login}}"></button>
+					<button formType="submit" bindtap="fn" data-fn="goToCash" wx:if="{{login}}"> </button>
+				</label>
+      </view>
+    </view>	
+	<label class="startGame">
+		<form bindsubmit="formSubmit" report-submit>
+			<view class="startgameredbag"></view>
+			<button open-type='getUserInfo' bindgetuserinfo="bindgetUserInfo" data-type='game'  wx:if="{{!login}}"></button>
+			<button formType="submit" bindtap="fn" data-fn="startGame" wx:if="{{login}}"> </button>
+		</form>
+	</label>	
+    <view class="otherlink">
+		<label  class="olli orange">
+			<form bindsubmit="formSubmit" report-submit>
+			<button  bindtap="fn" data-fn="goToGetCoin"></button>
+			</form>
+		</label>
+		
+      <label class="olli green" bindtap="fn" data-fn="goToRank"></label>
+      <label class="olli purple" bindtap="fn" data-fn="goToOtherGame"></label>
+    </view>
+		<ad wx:if="{{ad==0}}" class="index_ad" unit-id="adunit-acac0d84763f4ed5"></ad>
+		<ad wx:if="{{ad==1}}" class="index_ad" unit-id="adunit-565a0d2b6a0f54a3"></ad>
+		<ad wx:if="{{ad==2}}" class="index_ad" unit-id="adunit-e5ea9036ac0a3be4"></ad>
+  </view>
+</template>
+

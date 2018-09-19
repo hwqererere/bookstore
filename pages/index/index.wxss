@@ -1,0 +1,395 @@
+.flaybg{position:fixed;left:0rpx;top:0rpx;width:100%;height:100%;z-index: 8000;background:#000000;opacity:0.7;}
+#getGold{position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);z-index: 8001}
+#getGold .boxDiv{width: 618rpx;height: 638rpx;background: #fff7e5;margin: 250rpx auto 0;border-radius: 30rpx;position: relative}
+#getGold .boxTitle{padding: 30rpx 0}
+#getGold .boxTitle text{display: block;text-align: center}
+#getGold .boxTitle text:nth-child(1){font-weight:600}
+#getGold .boxTitle text:nth-child(2){font-size: 26rpx;margin-top: 10rpx}
+#getGold .close{position: absolute;right: 20rpx;top:20rpx}
+#getGold .close image{width: 50rpx;height: 50rpx}
+
+#getAward{position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);z-index: 8001}
+#getAward .boxDiv{width: 529rpx;height:510rpx;background: #fff;margin: 250rpx auto 0;border-radius: 30rpx;text-align: center; position: relative}
+#getAward .boxDiv .awardIcon{width: 139rpx;height: 155rpx;margin-top: 50rpx;background:url(https://res.doumai.com/mxdzz/award.png) center center no-repeat;background-size:100% 100%;float:left;margin-left:calc(50% - 70rpx)}
+#getAward .boxDiv .awardPrice{font-weight: 600;padding: 30rpx 0 0;float:left;width:100%}
+#getAward .boxDiv .awardPrice text{color: red}
+
+
+#getAward .boxDiv .awardTips{font-size: 26rpx;margin: 30rpx;float:left;width:100%;text-align: center;}
+#getAward .boxDiv .nextBtn{width: 423rpx;height: 86rpx;margin: auto;font-size: 26rpx; background: #ff3f46;border-radius: 50rpx;color: #fff;text-align: center;line-height: 86rpx;float:left;margin-left:calc(50% - 211rpx)}
+
+#awardword{background:url(https://res.doumai.com/mxdzz/rewardword.png) center center no-repeat;background-size:100% 100%;width:520rpx;height:648rpx;left:calc(50% - 260rpx);top:200rpx;position:fixed;z-index:8002;}
+#awardword .word1{float:left;width:456rpx;border:2rpx solid #dd8b28;height:78rpx;line-height:78rpx;float:left;margin-left:calc(50% - 230rpx);color:#000000;margin-top:56rpx;background:#ffffff;border-radius:39rpx;font-size: 24rpx;text-align: center;}
+#awardword .word1 font{color:#ff0000}
+#awardword .word1:nth-child(1){margin-top:202rpx;}
+#awardword .awardclose{background:url(https://res.doumai.com/mxdzz/close.png) center center no-repeat;background-size:100% 100%;width:40rpx;height:40rpx;position:fixed;z-index: 8004;top:345rpx;left:calc(50% + 180rpx)}
+
+
+
+
+#sign{}
+#sign .box{width:644rpx;height:630rpx;position:fixed;left:calc(50% - 322rpx);top:0rpx;z-index: 8001;opacity:0;animation:showsign 0.5s forwards linear;-webkit-animation:showsign 0.5s forwards linear;}
+@keyframes showsign
+{
+0% {opacity:0;top:0rpx;}
+100% {opacity:1;top:220rpx;}
+}
+@-webkit-keyframes showsign 
+{
+0% {opacity:0;top:0rpx;}
+100% {opacity:1;top:220rpx;}
+}
+
+#sign .box .title{width:588rpx;height:100rpx;float:left;margin-left:calc(50% - 294rpx);background-color:#8b32dc;color:#f6d1b7;font-size:36rpx;line-height: 100rpx;text-align: center;}
+
+#sign .box .boxbody{width:570rpx;float:left;margin-left:calc(50% - 285rpx);height:530rpx;background-color:#f0dfff}
+#sign .box .boxbody .sul{float:left;width:100%;}
+#sign .box .boxbody .sli{height:150rpx;float:left;width:120rpx;margin-left:12rpx;margin-top:58rpx;}
+#sign .box .boxbody .sli .day{float:left;width:100%;height:40rpx;border-top-left-radius:10rpx;border-top-right-radius:10rpx;background:#e140aa;color:#ffffff;line-height:40rpx;text-align:center;font-size:24rpx;}
+#sign .box .boxbody .sli .coin{float:left;width:100%;position:relative;border-bottom-left-radius:10rpx;border-bottom-right-radius: 10rpx;background:url(https://res.doumai.com/mxdzz/coin.png) center 30% no-repeat #d4bdeb;background-size:auto 35%;height:110rpx;text-align: center;line-height: 180rpx;color:#ffffff;font-size:22rpx }
+#sign .box .boxbody .sli .coin.havesign{background:url(https://res.doumai.com/mxdzz/coin.png) center 30% no-repeat #61348b;background-size:auto 35%;}
+#sign .box .boxbody .sli .coin .gou{display: none;}
+#sign .box .boxbody .sli .coin.havesign .gou{background:url(https://res.doumai.com/mxdzz/gou.png) right bottom no-repeat;background-size:auto 100%;right:0rpx;bottom:0rpx;width:120rpx;height:40rpx;display:block;position:absolute;}
+#sign .box .boxbody .sli:nth-child(1){margin-left:26rpx}
+#sign .box .boxbody .sli:nth-child(5){margin-left:26rpx;margin-top:14rpx;}
+#sign .box .boxbody .sli:nth-child(6){margin-top:14rpx;}
+#sign .box .boxbody .sli:nth-child(7){width:252rpx;margin-top:14rpx;}
+#sign .box .signbut{width:340rpx;height:80rpx;float:left;margin-left:calc(50% - 170rpx);text-align: center;line-height:80rpx;color:#ffffff;font-size:28rpx;margin-top:20rpx;background-color:#e140aa;border-radius:10rpx;}
+
+
+#timeredbag{width:652rpx;height:940rpx;position:fixed;left:calc(50% - 326rpx);top:0rpx;z-index: 8001;opacity:0;animation:showsign2 0.5s forwards linear;-webkit-animation:showsign2 0.5s forwards linear;}
+@keyframes showsign2
+{
+0% {opacity:0;top:0rpx;}
+100% {opacity:1;top:150rpx;}
+}
+@-webkit-keyframes showsign2
+{
+0% {opacity:0;top:0rpx;}
+100% {opacity:1;top:150rpx;}
+}
+#timeredbag .box{float:left;width:652rpx;position: relative;}
+#timeredbag .box .title{height:120rpx;width:652rpx;background:url(https://res.doumai.com/cdy/timebag1.png) center center no-repeat;background-size:100% 100%;color:#ffffff;text-align: center;line-height:100rpx;position:absolute;z-index:8005;left:calc(50% - 326rpx); top:0rpx;font-size:38rpx;}
+#timeredbag .box .title font{color:#fec952}
+#timeredbag .box .close{position:absolute;background:url(https://res.doumai.com/cdy/timebag6.png) center center no-repeat;background-size:100% 100%;right:40rpx;top:30rpx;z-index:8007;width:46rpx;height:46rpx;}
+#timeredbag .box .main{position:absolute;width:586rpx;left:calc(50% - 293rpx);border-bottom-left-radius: 20rpx;border-bottom-right-radius: 20rpx;height:835rpx;top:100rpx;background:url(https://res.doumai.com/cdy/timebag2.jpg) center 15% no-repeat #f0dfff;background-size:100% auto;z-index: 8002;}
+
+#timeredbag .box .timeline{float:left;width:100%;float:left;margin-top:30rpx;height:60rpx;}
+#timeredbag .box .timeline1{float:left;width:100rpx;text-align: center;color:#410070;font-size:30rpx;line-height: 60rpx;margin-left:60rpx;margin-right:20rpx;}
+#timeredbag .box .timeline2{float:left;border-radius: 7rpx;background-color:#410070;height:60rpx;padding-left:18rpx;padding-right:30rpx;}
+#timeredbag .box .timeline2 .timeb{width:62rpx;height:42rpx;line-height:42rpx;background-color:#ffffff;color:#410070;text-align: center;font-size:26rpx;display:inline-block;border-radius: 7rpx;float:left;margin-left:12rpx;margin-top:9rpx;font-weight:bold;}
+#timeredbag .box .timeline2 .timew{color:#FFFFFF;font-size:26rpx;float:left;line-height:42rpx;margin-left:12rpx;height:42rpx;margin-top:9rpx;}
+#timeredbag .box .redbagview{width:220rpx;height:288rpx;background:url(https://res.doumai.com/cdy/timebag5.png) center center no-repeat;background-size:100% 100%;float:left;margin-left:calc(50% - 110rpx);margin-top:50rpx;}
+#timeredbag .box .timetips{float:left;width:100%;color:#410070;font-size:24rpx;height:24rpx;margin-top:26rpx;text-align: center;}
+#timeredbag .box .timetips font{color:#ff0000}
+#timeredbag .box .helpfirline{float:left;width:100%;height:100rpx;margin-top:34rpx;}
+#timeredbag .box .helpfirline view{float:left;margin-left:80rpx;width:100rpx;height:100rpx;}
+#timeredbag .box .helpfirline view:nth-child(1){margin-left:calc(50% - 230rpx)}
+#timeredbag .box .helpfirline .helpnonefri{background:url(https://res.doumai.com/cdy/timebag4.png) center center no-repeat;background-size:100% 100%;}
+#timeredbag .box .helpfirline .helpfri{border-radius:50rpx;background:none;}
+#timeredbag .box .helpfirline .helpfri image{width:100rpx;height:100rpx;border-radius:50rpx;}
+#timeredbag .box .invfir{width:340rpx;height:80rpx;float:left;margin-left:calc(50% - 170rpx);margin-top: 38rpx;background-color:#410070;color:#ffffff;font-size:32rpx;text-align: center;line-height: 80rpx;}
+
+
+
+#redbag{position:fixed;top:0rpx;left:0rpx;width:100%;height:100%;z-index:8999;background-color:#fff }
+#redbag .msg{float:left;width:100%;margin-top:264rpx;text-align: center;font-size:28rpx;color:#d55a4a;}
+#redbag .money{width:100%;text-align: center;height:76rpx;line-height: 76rpx;font-size: 76rpx;color:#d55a4a;margin-top:109rpx;float:left;}
+#redbag .tipline{float:left;width:100%;margin-top:50rpx;height:30rpx;line-height:30rpx;color:#2b7fd4;font-size:24rpx;text-align: center;}
+#redbag .continueGame{color:#fff;margin-top:14rpx;background:url(https://res.doumai.com/rycgm/sharebut10.png) center center no-repeat;background-size:100% 100%;}
+#redbag .showmyreward{background-color:#fff;margin-top:20rpx;border-radius:50rpx;border:1rpx solid #a5a5a5;color:#a5a5a5;}
+#redbag .doub{width:100%;height:30rpx;width:80rpx;position: fixed;right:20%;top:400rpx;text-align:center;font-size:20rpx;line-height: 30rpx;background:url(https://res.doumai.com/rycgm/douletip.png) center center no-repeat;background-size:100% 100%;color:#FFFFFF}
+#redbag .but{float:left;width:486rpx;height:100rpx;line-height:100rpx;font-size:36rpx;text-align:center;margin-left:calc(50% - 243rpx); }
+#redbag .redbagtop{position:fixed;left:0rpx;top:0rpx;z-index:9000;width:100%;height:198rpx;background:url(https://res.doumai.com/rycgm/redbagtopbg.png) center top no-repeat;background-size:100% 100%;animation:redbagtopa 1s forwards linear;-webkit-animation:redbagtopa 1s forwards linear;}
+@keyframes redbagtopa
+{
+0% {height:698rpx;background-size:400% 100%;}
+100% {height:198rpx;background-size:100% 100%;}
+}
+@-webkit-keyframes redbagtopa 
+{
+0% {height:698rpx;background-size:400% 100%;}
+100% {height:198rpx;background-size:100% 100%;}
+}
+#redbag .redbagtop .logo{position: fixed;width:140rpx;height:140rpx;border-radius:70rpx;float:left;left: calc(50% - 70rpx);top:100rpx;background:url(https://res.doumai.com/miniProgramConfig/logo/hysdy.jpg) center center no-repeat;background-size:100% 100%;animation:redbagtopb 1s forwards linear;-webkit-animation:redbagtopb 1s forwards linear; }
+@keyframes redbagtopb
+{
+0%{opacity:0;}
+50% {opacity:0;}
+100% {opacity:1;}
+}
+@-webkit-keyframes redbagtopb
+{
+0%{opacity:0;}
+50% {opacity:0;}
+100% {opacity:1;}
+}
+
+
+
+
+
+
+.index{position:fixed;left:0rpx;top:0rpx;width:100%;height:100%;z-index: 0;}
+.index .indextop{float:left;width:100%;}
+.index .shareicon{float:left;width: 119rpx;height: 80rpx;margin-top:20rpx;background:url(https://res.doumai.com/mxdzz/share.png) center center no-repeat;background-size:100% 100%;display: inline-block;}
+.index .titleicon{width: 475rpx;height: 177rpx;background:url(https://res.doumai.com/cdy/title.png?r=1) center center no-repeat;background-size:100% 100%;float:right;margin-right:calc(50% - 237rpx);display: inline-block;}
+.index .userInfo{float:left;width: 690rpx;height: 219rpx;background:rgba(25, 25, 25, .25);border-radius: 10rpx;margin-top:40rpx;margin-left:calc(50% - 345rpx);padding: 25rpx;  box-sizing: border-box;  overflow: hidden;}
+.index .userInfo .userState{overflow: hidden}
+.index .userInfo .userState view,.userPrice view{float: left;height: 90rpx}
+.index .userInfo .userState text{line-height: 90rpx}
+.index .userInfo .userLogin,.userNumber,.userBalance{height: 90rpx;width:33%;}
+.index .userInfo .userNumber{color: #fff;text-align: center;}
+.index .userInfo .userNumber,.userBalance{}
+.index .userInfo .userBalance text{margin-left: 10rpx}
+.index .userInfo .userBalance{color: #ffd96b}
+.index .userInfo .userImg{width: 90rpx;height: 90rpx;border-radius: 45rpx;overflow: hidden;}
+.index .userInfo .userName{float:left;width:100rpx;height:90rpx;line-height: 90rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.index .userInfo .moneyicon{width: 24rpx;height: 90rpx;background:url(https://res.doumai.com/mxdzz/money.png) center 55% no-repeat;background-size:100% auto;}
+.index .userInfo .userName{color: #fff;margin: 0 0 0 20rpx}
+.index .userInfo .userPrice{float:left;width:100%;}
+.index .userInfo .userPrice view{float:left;width:33%;color:#ffd96b;font-size:26rpx;height: 90rpx;line-height:90rpx;}
+.index .userInfo .userPrice view:nth-child(2){text-align: center;}
+.index .userInfo .userPrice label{float:left;width:33%;color:#ffd96b;font-size:26rpx;height: 90rpx;line-height:90rpx;text-decoration:underline}
+.index .userInfo .userPrice .coin{background:url(https://res.doumai.com/mxdzz/coin.png) center center no-repeat;background-size:100% auto;width:42rpx;height:100%;display:inline-block;float:left}
+.index .userInfo .userPrice .txt{float:left;line-height:90rpx;padding:0rpx 10rpx;text-decoration:none;}
+.index .userInfo .userPrice .add{background:url(https://res.doumai.com/mxdzz/add.png) center center no-repeat;background-size:70% auto;width:42rpx;height:100%;display:inline-block;float:left}
+.index .userInfo .fontSmall{font-size: 26rpx;}
+.index .userInfo .fontBig{font-size: 40rpx}
+.index .startGame{float:left;width: 690rpx;height: 221rpx;border-radius: 10rpx;margin-top:20rpx;margin-left:calc(50% - 345rpx);background:url(https://res.doumai.com/mxdzz/start2.png) center center no-repeat;background-size:100% 100%;position:relative;}
+
+.index .startGame .startgameredbag{background:url(https://res.doumai.com/mxdzz/startgameredpag.png) center center no-repeat;background-size:100% 100%;width:140rpx;height:160rpx;animation:startredbag 2s infinite linear;-webkit-animation:startredbag 2s infinite linear;position:absolute;right:60rpx;top:30rpx}
+
+@keyframes startredbag
+{
+0% {transform:scale(1,1);}
+5%{transform:scale(1.2,1.2);}
+10%{transform:scale(1,1);}
+15%{transform:scale(1.2,1.2);}
+20%{transform:scale(1,1);}
+100% {transform:scale(1,1);}
+}
+@-webkit-keyframes startredbag 
+{
+0% {transform:scale(1,1);}
+5%{transform:scale(1.2,1.2);}
+10%{transform:scale(1,1);}
+15%{transform:scale(1.2,1.2);}
+20%{transform:scale(1,1);}
+100% {transform:scale(1,1);}
+}
+
+
+.index .otherlink{width: 690rpx;float:left;margin-top:20rpx;overflow: hidden;margin-left:calc(50% - 345rpx);}
+.index .otherlink label{width: 216rpx;height: 220rpx;float: left;border-radius: 10rpx;margin-left: 20rpx;}
+.index .otherlink label:nth-child(1){margin: 0}
+.index .otherlink label.orange{background:url(https://res.doumai.com/mxdzz/gold.png) center center no-repeat #ff5440;background-size:115% 115%}
+.index .otherlink label.green{background:url(https://res.doumai.com/mxdzz/rank.png) center center no-repeat;background-size:115% 115%}
+.index .otherlink label.purple{background:url(https://res.doumai.com/mxdzz/moreplay.png) center center no-repeat;background-size:115% 115%}
+
+.index .advertising{float:left;width: 690rpx;height: 163rpx;margin-top:20rpx;margin-left:calc(50% - 345rpx);border-radius: 10rpx;background:url(https://res.doumai.com/mxdzz/adv.png) center center no-repeat;background-size:100% 100%;}
+
+.index .floatedclick{background:url(https://res.doumai.com/rycgm/floatclick.png) center center no-repeat;background-size:100% 100%;transform-origin:50% 50%;animation:floatedclick 4s infinite linear;-webkit-animation:floatedclick 4s infinite linear;position:fixed;right:40rpx;top:20rpx;z-index:10;width:85rpx;height:92rpx}
+@keyframes floatedclick
+{
+0% {transform:rotateZ(10deg);}
+10% {transform:rotateZ(10deg);}
+11% {transform:rotateZ(-10deg);}
+20% {transform:rotateZ(-10deg);}
+21%{transform:rotateZ(10deg);}
+30%{transform:rotateZ(10deg);}
+31%{transform:rotateZ(-10deg);}
+40%{transform:rotateZ(-10deg);}
+41%{transform:rotateZ(10deg);}
+50%{transform:rotateZ(10deg);}
+90%{transform:rotateZ(10deg);}
+91%{transform:rotateZ(-10deg);}
+93%{transform:rotateZ(10deg);}
+95%{transform:rotateZ(-10deg);}
+97%{transform:rotateZ(10deg);}
+100%{transform:rotateZ(10deg);}
+}
+@-webkit-keyframes floatedclick 
+{
+0% {transform:rotateZ(10deg);}
+10% {transform:rotateZ(10deg);}
+11% {transform:rotateZ(-10deg);}
+20% {transform:rotateZ(-10deg);}
+21%{transform:rotateZ(10deg);}
+30%{transform:rotateZ(10deg);}
+31%{transform:rotateZ(-10deg);}
+40%{transform:rotateZ(-10deg);}
+41%{transform:rotateZ(10deg);}
+50%{transform:rotateZ(10deg);}
+90%{transform:rotateZ(10deg);}
+91%{transform:rotateZ(-10deg);}
+93%{transform:rotateZ(10deg);}
+95%{transform:rotateZ(-10deg);}
+97%{transform:rotateZ(10deg);}
+100%{transform:rotateZ(10deg);}
+}
+
+.index .timeredbag{background:url(https://res.doumai.com/cdy/timebag3.png) center center no-repeat;background-size:100% 100%;transform-origin:50% 50%;animation:floatedclick2 1s infinite linear;-webkit-animation:floatedclick2 1s infinite linear;position:fixed;right:40rpx;top:120rpx;z-index:10;width:190rpx;height:126rpx;color:#fec952;font-size:22rpx;line-height:200rpx;text-align: center;}
+@keyframes floatedclick2
+{
+0% {transform:rotateZ(10deg);}
+49% {transform:rotateZ(10deg);}
+50%{transform:rotateZ(-10deg);}
+99%{transform:rotateZ(-10deg);}
+100% {transform:rotateZ(10deg);}
+}
+@-webkit-keyframes floatedclick2
+{
+0% {transform:rotateZ(10deg);}
+49% {transform:rotateZ(10deg);}
+50%{transform:rotateZ(-10deg);}
+99%{transform:rotateZ(-10deg);}
+100% {transform:rotateZ(10deg);}
+}
+
+
+/* 
+.cash{position:fixed;left:0rpx;top:0rpx;width:100%;height:100%;z-index:0;}
+.cash .cashbox{width:660rpx;height:340rpx;border-radius: 22rpx;background-color:#ffffff;float:left;margin-left:calc(50% - 330rpx)}
+.cash .cashbox .cashbox-title{float:left;margin-top:52rpx;font-size: 24rpx;width:calc(100% - 140rpx);margin-left:70rpx;color:#646464}
+.cash .cashbox .cashbox-input{float:left;margin-top:96rpx;width:calc(100% - 140rpx);margin-left:70rpx;height:62rpx;line-height:62rpx;padding-bottom:20rpx;border-bottom: 1rpx solid #f2f1f7;}
+.cash .cashbox .cashbox-input text{float:left;height:62rpx;line-height:62rpx;}
+.cash .cashbox .cashbox-input input{float:left;height:62rpx;line-height: 62rpx;width:300rpx}
+.cash .cashbox .cashbox-tips{float:left;width:calc(100% - 140rpx);margin-left:70rpx;font-size:28rpx;margin-top:20rpx;height:28rpx;}
+.cash .cashbox .cashbox-tips font{color:#ff0000}
+.cash .ordermake{float:left;margin-left:calc(50% - 330rpx);color:#66360e;margin-top:40rpx;width:660rpx;height:88rpx;line-height: 88rpx;text-align: center;border-radius: 44rpx; background: -webkit-linear-gradient(#fdd207, #fda908);background: linear-gradient(#fdd207, #fda908);}
+.cash .orderlisttitle{float:left;width:100%;height:32rpx;margin-top:44rpx;margin-bottom:30rpx;text-align:center;color:#ffffff;line-height:32rpx; }
+.cash .listbox{position:fixed;z-index:1;width:660rpx;left:calc(50% - 330rpx);top:574rpx;bottom:40rpx;border-radius: 20rpx;}
+.cash .listbox .cli{float:left;width:100%;height:80rpx;padding:10rpx 0rpx;border-bottom:1rpx solid #505050}
+.cash .listbox .cli .lefttxt{float:left;width:400rpx;height:80rpx;margin-left:10rpx;}
+.cash .listbox .cli .lefttxt text{float:left;width:100%;height:40rpx;line-height: 40rpx;font-size: 26rpx;color:#ffffff}
+.cash .listbox .cli .righttxt{float:right;height:80rpx;line-height: 80rpx;font-size:30rpx;color:#ffffff;margin-right:10rpx}
+.cash .listbox .cli .righttxt font{font-size:50rpx} */
+
+.morepage{width:100%;height:100%;position: fixed;left:0rpx;top:0rpx;position:fixed;z-index: 0;}
+.morepage .mul{position:fixed;top:0rpx;bottom:0rpx;width:690rpx;left:calc(50% - 345rpx)}
+.morepage .mli{height:164rpx;width:100%;float:left;margin-bottom:22rpx;border-radius: 16rpx;}
+.morepage .mli .img{float:left;margin:30rpx;}
+.morepage .mli .img image{float:left;width:90rpx;height:90rpx;border-radius:45rpx;}
+.morepage .mli .word{height:90rpx;float:left;width:320rpx;}
+.morepage .mli .word view{float:left;font-size:26rpx;height:26rpx;line-height:26rpx;width:320rpx;white-space:nowrap;text-overflow: ellipsis;overflow: hidden;color:#ffffff}
+.morepage .mli .word view:nth-child(1){float:left;margin-top:37rpx}
+.morepage .mli .word view:nth-child(2){float:left;margin-top:28rpx}
+.morepage .mli .but{ background: -webkit-linear-gradient(left,#ffa300, #f9d004);background: linear-gradient(left,#ffa300, #f9d004);width:146rpx;height:60rpx;border-radius:10rpx;float:right;margin-right:26rpx;line-height:60rpx;text-align: center;margin-top:49rpx;font-size:30rpx}
+
+
+.game{width:100%;height:100%;position: fixed;left:0rpx;top:0rpx;position:fixed;z-index: 0;}
+
+.game .awardRight{padding: 10rpx 30rpx;border: 1rpx solid #808080;border-radius: 35rpx;font-size: 26rpx;height:50rpx;position:fixed;right:20rpx;top:20rpx;z-index:3;}
+.game .awardRight label.coin{background:url(https://res.doumai.com/mxdzz/coin.png) center center no-repeat;background-size:100% auto;width:42rpx;height:100%;float:left}
+.game .awardRight label.txt{float:left;line-height:50rpx;padding:0rpx 10rpx;}
+.game .awardRight label.add{background:url(https://res.doumai.com/mxdzz/add.png) center center no-repeat;background-size:100% auto;width:42rpx;height:100%;float:left}
+.game .award{font-size: 26rpx;text-decoration:underline;width:100%;position:fixed;left:0rpx;top:40rpx;text-align: center;z-index: 2;}
+.game .publicBtn_help{background:url(https://res.doumai.com/mxdzz/help.png) 90% center no-repeat #ed5a5a;background-size:auto 60%;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;text-align:left;text-indent:20rpx;}
+.game .publicBtn_share{background:url(https://res.doumai.com/mxdzz/shareBtnIcon.png) 90% center no-repeat #509fd1;background-size:auto 60%;border-top-right-radius: 50rpx;border-bottom-right-radius:50rpx;text-align:left;text-indent:20rpx;}
+.game  .publicBtn label{width:140rpx;height: 54rpx;display: inline-block;color: #fff;font-size:26rpx;line-height: 54rpx;}
+.game .starItem{width:533rpx;height:86rpx;line-height:86rpx;border-radius:44rpx;margin: 30rpx auto 0;background-color:#efe6fb;color:#000016;position:relative;transform:scale(0,0);float:left;margin-left:calc(50% - 266rpx)}
+.game .starItem.big{animation:abig 0.3s  linear;-webkit-animation:abig 0.3s  linear forwards;}
+.game .starItem.small{animation:asmall 0.3s  linear;-webkit-animation:asmall 0.3s  linear forwards;}
+.game .starItem.wrong{background:#ed5a5a}
+.game .starItem .answercoin{position:absolute;left:0rpx;top:0rpx;height:86rpx;background:url(https://res.doumai.com/mxdzz/coin.png) 20% center no-repeat;background-size:auto 50%;text-indent:80rpx;opacity:1;color:#ffffff;display: block;}
+.game .starItem.wrong .answercoin{animation:coindown 1s  linear forwards;-webkit-animation:coindown 1s  linear forwards;}
+@keyframes coindown
+{
+0% {opacity:1;display:block;}
+99% {opacity:0;display:block;}
+100% {opacity:0;display:none;}
+}
+@-webkit-keyframes coindown 
+{
+0% {opacity:1;display:block;}
+99% {opacity:0;display:block;}
+100% {opacity:0;display:none;}
+}
+.game .starItem.currect{background:#73c65e}
+.game .starItem.currect .answercoin{animation:coindown 1s  linear forwards;-webkit-animation:coindown 1s  linear forwards;}
+.game .star image{width: 558rpx;height: 258rpx;background: #fff;border-radius: 10rpx;transform:scale(0,0);}
+.game .star.big image{animation:abig 0.5s  linear;-webkit-animation:abig 0.5s  linear forwards;}
+.game .star.small image{animation:asmall 0.5s  linear;-webkit-animation:asmall 0.5s  linear forwards;}
+@keyframes abig
+{
+0% {transform:scale(0,0);}
+100% {transform:scale(1,1);}
+}
+@-webkit-keyframes abig 
+{
+0% {transform:scale(0,0);}
+100% {transform:scale(1,1);}
+}
+@keyframes asmall
+{
+0% {transform:scale(1,1);}
+100% {transform:scale(0,0);}
+}
+@-webkit-keyframes asmall 
+{
+0% {transform:scale(1,1);}
+100% {transform:scale(0,0);}
+}
+
+
+.game .bgmview{position:fixed;z-index:100;width:50rpx;height:50rpx;right:2%;top:120rpx;border:1rpx solid #ffffff;border-radius:25rpx;}
+.game .nobgm{background:url(https://res.doumai.com/mxdzz/nosound.png) center center no-repeat;background-size:100% 100%;}
+.game .bgm{background:url(https://res.doumai.com/mxdzz/sound.png) center center no-repeat;background-size:auto 100%;transform-origin:50% 50%;animation:bgmon 10s infinite linear;-webkit-animation:bgmon 10s infinite linear;}
+@keyframes bgmon
+{
+0% {transform:rotate(0deg);}
+50% {transform:rotate(180deg);}
+100% {transform:rotate(360deg);}
+}
+@-webkit-keyframes bgmon 
+{
+0% {transform:rotate(0deg);}
+50% {transform:rotate(180deg);}
+100% {transform:rotate(360deg);}
+}
+
+.gametop{color: #fff;overflow: hidden;margin-top: 30rpx}
+.gametop view{float: left}
+.gametop .customs{width: 135rpx;height: 72rpx;line-height: 72rpx;text-align: center; background: #ed5a5a;border-top-right-radius: 50rpx;border-bottom-right-radius: 50rpx;font-size: 26rpx}
+
+
+.moneyIcon{margin-right: 10rpx}
+.moneyIcon,.buyIcon{width: 31rpx;height: 31rpx;vertical-align: middle}
+.gameWrap{width: 750rpx;margin: 20rpx 0 0;text-align: center;position: relative}
+
+
+.publicBtn{margin: 40rpx 0}
+.publicBtn image{width: 28rpx;height: 28rpx;float: right;margin:15rpx 10rpx 0 0;}
+
+
+
+
+.gameWrap .musicIcon{position: absolute;right: 80rpx;top:0;}
+.gameWrap .musicIcon image{width: 57rpx;height:57rpx}
+
+.getGoldTips{position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);z-index: 120}
+.getGoldTips .boxDiv{width: 618rpx;height: 638rpx;background: #fff7e5;margin: 250rpx auto 0;border-radius: 30rpx;position: relative}
+.getGoldTips .boxTitle{padding: 30rpx 0}
+.getGoldTips .boxTitle text{display: block;text-align: center}
+.getGoldTips .boxTitle text:nth-child(1){font-weight:600}
+.getGoldTips .boxTitle text:nth-child(2){font-size: 26rpx;margin-top: 10rpx}
+.rewardBtn{background: #47a150;color: #fff;font-size: 26rpx;margin:30rpx auto; border-radius: 50rpx;width: 490rpx;height: 94rpx;text-align: center;line-height: 94rpx}
+.inviteBtn{background: #f58147;color: #fff;font-size: 26rpx;margin:30rpx auto; border-radius: 50rpx;width: 490rpx;height: 94rpx;text-align: center;line-height: 94rpx;display:block;}
+.close{position: absolute;right: 20rpx;top:20rpx}
+.close image{width: 50rpx;height: 50rpx}
+
+.getawardTips{position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);z-index: 120}
+.getawardTips .boxDiv{width: 529rpx;height: 555rpx;background: #fff;margin: 250rpx auto 0;border-radius: 30rpx;text-align: center; position: relative}
+.getawardTips .boxDiv image{width: 139rpx;height: 155rpx;margin-top: 50rpx}
+.getawardTips .boxDiv .awardPrice{font-weight: 600;padding: 30rpx 0 0}
+.getawardTips .boxDiv .awardPrice text{color: red}
+.getawardTips .boxDiv .awardTips{font-size: 26rpx;margin: 30rpx}
+.getawardTips .boxDiv .nextBtn{width: 423rpx;height: 86rpx;margin: auto;font-size: 26rpx; background: #ff3f46;border-radius: 50rpx;color: #fff;text-align: center;line-height: 86rpx}
+
+
+
+@import "../css/cash.wxss";
+@import "../css/cashlist.wxss";
+@import "../css/rank.wxss";
+@import "../css/getcoin.wxss";

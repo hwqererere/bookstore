@@ -1,0 +1,35 @@
+<template name="game">
+	<view class="game">
+	  <view class="gametop">
+	    <view class="customs">第{{gameData.index+1}}关</view>
+	    <view class="award" bindtap="fn" data-fn="openawardwordFloated">查看奖励</view>
+	    <view class="awardRight">
+	      <label class="coin"></label>
+	      <label class="txt">{{gameData.coin}}</label>
+	      <label class="add" bindtap="fn" data-fn="openAddCoinFloated"></label>
+	    </view>
+	  </view>
+		<view class="bgmview {{nobgm=='0'?'bgm':'nobgm'}}" bindtap="fn" data-fn="setbgm"></view>
+	  <view class="gameWrap">
+	    <view class="star {{animate}}">
+	      <image mode="aspectFit" src="{{gameData.pic}}"></image>
+	    </view>
+	    <view class="publicBtn">
+	      <label class="publicBtn_help">求助<button open-type='share' data-sharefn="coinshare"></button></label>
+	      <label class="publicBtn_share">分享+<button open-type='share' data-sharefn="coinshare"></button></label>
+	    </view>
+	    <label  wx:for="{{gameData.key_list}}" wx:for-index="idx"  wx:key="key" class="starItem {{item.chose==1?'wrong':''}} {{item.chose==2?'currect':''}} {{animate}}" bindtap="fn" data-fn="clickAnswer" data-val="{{idx}}">{{item.word}}
+	    <view class="answercoin" data-val="{{idx}}" wx:if="{{item.chose==1 || item.chose==2}}">-200</view>
+	    </label>
+
+	    <view class="musicIcon">
+	      <image src="{{gameData.musicIcon}}"></image>
+	    </view>
+	  </view>
+		<ad wx:if="{{ad==0}}" class="index_ad" unit-id="adunit-acac0d84763f4ed5"></ad>
+		<ad wx:if="{{ad==1}}" class="index_ad" unit-id="adunit-565a0d2b6a0f54a3"></ad>
+		<ad wx:if="{{ad==2}}" class="index_ad" unit-id="adunit-e5ea9036ac0a3be4"></ad>
+  </view>
+  
+  
+</template>

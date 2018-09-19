@@ -1,0 +1,47 @@
+<template name="cash" >
+<!--  <view class="cash">
+		<view class="cashbox">
+			<view class="cashbox-title">提现金额(满3元可提现)</view>
+			<view class="cashbox-input"><text>￥</text><input placeholder="0" value="" bindinput="fn" data-fn="bindKeyInput" type="digit"/></view>
+			<view class="cashbox-tips">可提现金额<font>{{cashData.rmb/100}}</font>元，一天只可提现<font>1</font>次</view>
+		</view>
+		<view class="ordermake" bindtap="fn" data-fn="makeOrder">确认提现</view>
+		<view class="orderlisttitle">提现记录</view>
+		<scroll-view class="listbox blackbg50">
+			<view class="cli" wx:for="{{cashData.orderlist}}" wx:key="key">
+				<view class="lefttxt">
+					<text>{{item.order_create_time}}</text>
+					<text>{{item.order_state=='0'?'审核中':''}}{{item.order_state=='2'?'审核通过':''}}{{item.order_state=='1'?'已完成':''}}</text>
+				</view>
+				<view class="righttxt">
+					￥<font>{{item.order_rmb/100}}</font>
+				</view>
+			</view>
+		</scroll-view>
+  </view> -->
+	
+	<view class="cash">
+	  <view class="cashlistbut" bindtap='fn'  data-fn="linktocashlist">提现记录</view>
+	  <view class="mymoneytitle">我的余额</view>
+	  <view class="mymoney">￥{{cashData.rmb/100}}</view>
+	  <view class="forminput">
+      <view class="moneybut" bindtap='fn'  data-fn="setcash" data-val="1">1元</view>
+			<view class="moneybut" bindtap='fn'  data-fn="setcash" data-val="5">5元</view>
+			<view class="moneybut" bindtap='fn'  data-fn="setcash" data-val="10">10元</view>
+			<view class="moneybut" bindtap='fn'  data-fn="setcash" data-val="15">15元</view>
+			<view class="moneybut" bindtap='fn'  data-fn="setcash" data-val="50">50元</view>
+			<view class="moneybut" bindtap='fn'  data-fn="setcash" data-val="100">100元</view>
+			
+			
+	  </view>
+	  <button type="primary" class="subcash" bindtap='fn'  data-fn="makeOrder" wx:if="{{cashData.inputValue}}">{{cashData.inputValue?'提现':'满1元提现'}}  </button>
+		<button type="primary" class="subcash" bindtap='fn'  data-fn="makeOrder" disabled="true" wx:else>{{cashData.inputValue?'提现':'满1元提现'}}  </button>
+	  <button class="continueGame" bindtap='fn'  data-fn="linktoindex">继续游戏</button>
+	  <view class="helptip">
+	    <view>提现金额将在1-5个工作日打到您的微信零钱中</view>
+	    
+	  
+	  </view>
+	</view>
+	
+</template>

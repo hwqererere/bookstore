@@ -1,0 +1,27 @@
+<template name="rank">
+	<view class="rank">
+		<view class="ranktitle">
+			<view class="{{rankData.all?'curr':''}}" bindtap="fn" data-fn="allchange">全球排行</view>
+			<view class="{{rankData.all?'':'curr'}}" bindtap="fn" data-fn="allchange">红包排行</view>
+		</view>
+		<scroll-view scroll-y class="rankbox" wx:if="{{rankData.all}}">
+			<view class="list" wx:for="{{rankData.all_rank}}" wx:key="score" wx:for-index="idx">
+				<view>{{idx+1}}</view>
+				<view><image src="{{item.user_logo}}"></image></view>
+				<view>{{item.user_nickname?item.user_nickname:'这家伙很懒...'}}</view>
+				<view><font>{{item.score}}</font>关</view>
+			</view>
+			<view class="list"></view>
+		</scroll-view>
+		<scroll-view class="rankbox" wx:if="{{!rankData.all}}">
+			<view class="list" wx:for="{{rankData.rmb_rank}}" wx:key="score" wx:for-index="idx">
+				<view>{{idx+1}}</view>
+				<view><image src="{{item.user_logo}}"></image></view>
+				<view>{{item.user_nickname?item.user_nickname:'这家伙很懒...'}}</view>
+				<view><font>{{item.score/100}}</font>元</view>				
+			</view>
+			<view class="list"></view>
+		</scroll-view>
+		<label class="invate">邀请好友来pk<button open-type='share' data-sharefn="coinshare"></button></label>
+	</view>
+</template>
